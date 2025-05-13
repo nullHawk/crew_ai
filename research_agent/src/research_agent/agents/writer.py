@@ -1,4 +1,5 @@
 from crewai import Agent
+from research_agent.llm import get_gemini_llm
 
 writer = Agent(
     role="Content Writer",
@@ -19,5 +20,6 @@ writer = Agent(
               "when your statements are opinions "
               "as opposed to objective statements.",
     allow_delegation=False,
-    verbose=True
+    verbose=True,
+    llm=get_gemini_llm()
 )

@@ -1,4 +1,5 @@
 from crewai import Agent
+from research_agent.llm import get_gemini_llm
 
 editor = Agent(
     role="Editor",
@@ -13,5 +14,6 @@ editor = Agent(
               "and also avoids major controversial topics "
               "or opinions when possible.",
     allow_delegation=False,
-    verbose=True
+    verbose=True,
+    llm=get_gemini_llm()
 )
