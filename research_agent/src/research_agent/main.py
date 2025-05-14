@@ -7,7 +7,7 @@ from tasks import plan, edit, write
 crew = Crew(
     agents=[planner, writer, editor],
     tasks=[plan, write, edit],
-    verbose=2
+    verbose=True
 )
 
 if __name__ == "__main__":
