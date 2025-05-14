@@ -1,5 +1,5 @@
 from crewai import Agent
-from research_agent.llm import get_gemini_llm
+from llm import get_gemini_llm
 
 planner = Agent(
     role="Content Planner",
